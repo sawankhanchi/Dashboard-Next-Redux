@@ -23,7 +23,7 @@ export const handleUserLogin = ({
     onSuccess?: () => void
     onFail?: (resp?: any) => void
 }): any => {
-    return async (dispatch) => {
+    return async (dispatch: (arg0: { type: "USER_LOGIN" }) => void) => {
         try {
             if (email === 'fire@gmail.com') {
                 if (password === '123456') {
@@ -45,7 +45,7 @@ export const handleUserLogin = ({
 
 export const handleUserLogout = ({ onSuccess = () => { } }: {
     onSuccess?: () => void
-}): any => async (dispatch) => {
+}): any => async (dispatch: (arg0: { type: "USER_LOGOUT" }) => void) => {
 
     localStorage.removeItem("email")
     localStorage.removeItem("password")

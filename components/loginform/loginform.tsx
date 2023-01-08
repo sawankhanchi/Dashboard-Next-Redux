@@ -82,9 +82,9 @@ export default function LoginForm() {
       router.push("/dashboard")
     }
 
-  }, [])
+  });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     dispatch(handleUserLogin({
       email, password,
