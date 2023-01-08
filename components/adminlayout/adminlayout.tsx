@@ -10,7 +10,7 @@ overflow: visible;
 padding: 1px;
 `;
 
-const AdminLayout: React.FC<{ title: string }> = ({ title, children }) => {
+const AdminLayout: React.FC<{ title: string, children: React.ReactNode }> = ({ title, children }) => {
 
     return (
         <Wrapper>
